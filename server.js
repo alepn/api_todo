@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cors())
 
 // Mongo
-mongoose.connect('mongodb://root:rootpwd@localhost:27017/todos?authSource=admin', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://root:rootpwd@localhost:27017/todos?authSource=admin', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 requireDir('./src/models')
 
